@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        <h1>Pokedex</h1>
+
+        <nav>
+            <ul>
+                <li><a href="">Início</a></li>
+                <li><a href="">Pokémon</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+         <section id="inicio" class="inicio">
+            <div>
+                <h2>Explore o mundo Pokémon!</h2>
+                <p>Descubra diferentes espécies de Pokémon, conheça suas características e explore o universo Pokémon.</p>
+                <a href="#pokemons">Explorar Pokémons</a>
+            </div>
+        </section>
+
+        <section id="pokemons" class="pokemons">
+            <div class="titulo-secao">
+                <h2>Pokémons</h2>
+                <p>Conheça alguns dos Pokémon disponíveis na Pokédex.</p>
+            </div>
+
+            <div class="pesquisa-pokemon">
+                <input
+                    type="text"
+                    id="pesquisar-pokemon"
+                    placeholder="Digite o nome do Pokémon..."
+                >
+
+                <select id="filtro-tipo">
+                    <option value="">Todos os tipos</option>
+                    <option value="normal">Normal</option>
+                    <option value="fire">Fogo</option>
+                    <option value="water">Água</option>
+                    <option value="electric">Elétrico</option>
+                    <option value="grass">Planta</option>
+                    <option value="ice">Gelo</option>
+                    <option value="fighting">Lutador</option>
+                    <option value="poison">Veneno</option>
+                    <option value="ground">Terra</option>
+                    <option value="flying">Voador</option>
+                    <option value="psychic">Psíquico</option>
+                    <option value="bug">Inseto</option>
+                    <option value="rock">Pedra</option>
+                    <option value="ghost">Fantasma</option>
+                    <option value="dragon">Dragão</option>
+                    <option value="dark">Sombrio</option>
+                    <option value="steel">Aço</option>
+                    <option value="fairy">Fada</option>
+                </select>
+            </div>
+
+            <p id="mensagem-vazia" hidden>Nenhum Pokémon encontrado.</p>
+
+            <div id="lista-pokemons" class="lista-pokemons"></div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2>Sobre a Pokédex</h2>
+            <p>Uma plataforma para explorar informações sobre diferentes Pokémon através da PokéAPI.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto acadêmico - Desenvolvimento Front-End</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+<div id="modal-pokemon" class="modal">
+    <div class="modal-conteudo">
+        <button id="fechar-modal">&times;</button>
+        <img id="modal-img" src="" alt="Imagem do Pokémon">
+        <h2 id="modal-nome"></h2>
+        <p id="modal-numero"></p>
+        <div id="modal-tipos" class="tipos-pokemon"></div>
+        <div class="modal-info-extra">
+            <p><strong>Altura:</strong> <span id="modal-altura"></span></p>
+            <p><strong>Peso:</strong> <span id="modal-peso"></span></p>
+        </div>
+    </div>
+</div>
+</html>
